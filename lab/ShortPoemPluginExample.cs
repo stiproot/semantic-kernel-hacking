@@ -12,15 +12,7 @@ internal static class ShortPoemPluginExample
                 .AddDebug();
         });
 
-        var kernelWithConfiguration = new KernelBuilder()
-            // .WithLoggerFactory(loggerFactory)
-            .AddAzureOpenAIChatCompletion(
-                Gpt_4_32k,
-                Gpt_4_32k,  // The name of your deployment (e.g., "gpt-35-turbo")
-                endpoint,        // The endpoint of your Azure OpenAI service
-                apiKey           // The API key of your Azure OpenAI service
-            )
-            .Build();
+        var kernelWithConfiguration = Factories.CreateKernel(); 
 
         var pluginsDirectory = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "plugins", "WritePlugin");
         var writerPlugin = kernelWithConfiguration

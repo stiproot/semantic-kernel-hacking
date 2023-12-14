@@ -36,11 +36,11 @@ internal static class OpenAIFunctionsExample
             {
                 Messages =
                 {
-                    new ChatMessage(ChatRole.System, $@"
+                    new ChatRequestSystemMessage($@"
                             You are a sophisticated AI assistant, a specialist in user intent detection and interpretation.
                             Your task is to perceive and respond to the user's needs, even when they're expressed in an indirect or direct manner.
                             You excel in recognizing subtle cues: for example, if a user states they are 'hungry', you should assume they are seeking nearby dining options such as a restaurant or a cafe. If they indicate feeling 'tired', 'weary', or mention a long journey, interpret this as a request for accommodation options like hotels or guest houses. However, remember to navigate the fine line of interpretation and assumption: if a user's intent is unclear or can be interpreted in multiple ways, do not hesitate to politely ask for additional clarification. Use only values from the nums in the functions."),
-                    new ChatMessage(ChatRole.User, userQuestion)
+                    new ChatRequestUserMessage(userQuestion)
                 },
                 Functions = new[] { CreateFunctionDefinition(findFunction) },
                 DeploymentName = Secrets.Gpt_4_32k,

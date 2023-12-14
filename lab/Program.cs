@@ -4,4 +4,5 @@
 // await OrchestratorPluginExample.RunAsync();
 // await SimpleNativeFnExample.RunAsync();
 // await SimpleNativeFnExampleWithTwoArgs.RunAsync();
+// await OpenAIFunctionsExample.RunAsync();
 await OrchestratorPluginExample2.RunAsync();
