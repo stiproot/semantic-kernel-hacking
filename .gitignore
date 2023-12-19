@@ -6,6 +6,7 @@
 PAT.txt
 *Secrets.cs
 SEC.txt
+settings.json
 
 # User-specific files
 *.suo
