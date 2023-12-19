@@ -9,7 +9,7 @@ using Microsoft.SemanticKernel.Plugins.Memory;
 using Kernel = Microsoft.SemanticKernel.Kernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 
-public static class MemoryInteraction_Text
+public static class MemoryWithChroma_Text
 {
     public static async Task RunAsync()
     {
